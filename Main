@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("==============================================");
+        System.out.println("       THU NGHIEM PHONG TO HINH HOC");
+        System.out.println("==============================================");
+        System.out.print("Nhap chieu rong: ");
+        double width = sc.nextDouble();
+        System.out.print("Nhap chieu cao: ");
+        double height = sc.nextDouble();
+        Rectangle rectangle = new Rectangle(width, height);
+        System.out.println("\n--- THONG TIN BAN DAU ---");
+        System.out.printf("Width: %.2f%n", rectangle.getWidth());
+        System.out.printf("Height: %.2f%n", rectangle.getHeight());
+        System.out.printf("Dien tich goc: %.2f cm2%n", rectangle.getArea());
+        System.out.print("\nNhap ty le resize (%): ");
+        double percent = sc.nextDouble();
+        rectangle.resize(percent);
+        System.out.println("\n--- SAU KHI RESIZE ---");
+        System.out.printf("Ty le resize: %+.2f%%%n", percent);
+        System.out.printf("Width moi: %.2f%n", rectangle.getWidth());
+        System.out.printf("Height moi: %.2f%n", rectangle.getHeight());
+        System.out.printf("Dien tich moi: %.2f cm2%n", rectangle.getArea());
+    }
+}
